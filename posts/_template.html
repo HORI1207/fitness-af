@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ↓ 記事ごとに変更 -->
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <title>{{ARTICLE_TITLE}}｜FitLab</title>
+  <!-- ↑ 記事ごとに変更 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">FitLab</a>
+      <nav>
+        <ul class="site-nav" id="site-nav">
+          <li><a href="/articles/">記事一覧</a></li>
+          <li><a href="/articles/?cat=training">筋トレ</a></li>
+          <li><a href="/articles/?cat=diet">ダイエット</a></li>
+          <li><a href="/articles/?cat=supplement">サプリ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- 記事ヘッダー -->
+      <div class="article-header">
+        <div class="container">
+          <p class="article-category">{{CATEGORY}}</p>
+          <h1 class="article-title">{{ARTICLE_TITLE}}</h1>
+          <p class="article-meta">{{DATE}}　更新：{{UPDATE_DATE}}</p>
+        </div>
+      </div>
+
+      <!-- 記事本文 -->
+      <div class="container">
+        <div class="article-body">
+
+          <!-- ===== 本文ここから ===== -->
+
+          <p>{{INTRO_TEXT}}</p>
+
+          <h2>{{H2_1}}</h2>
+          <p>{{H2_1_TEXT}}</p>
+
+          <!-- アフィリエイトCTAボックス（適切な位置に挿入） -->
+          <div class="cta-box">
+            <p class="cta-box-title">{{CTA_TITLE}}</p>
+            <p class="cta-box-desc">{{CTA_DESC}}</p>
+            <a href="{{AFFILIATE_URL}}" class="btn" target="_blank" rel="noopener noreferrer">{{CTA_BUTTON_TEXT}}</a>
+          </div>
+
+          <h2>{{H2_2}}</h2>
+          <p>{{H2_2_TEXT}}</p>
+
+          <h2>まとめ</h2>
+          <p>{{SUMMARY_TEXT}}</p>
+          <ul>
+            <li>{{SUMMARY_POINT_1}}</li>
+            <li>{{SUMMARY_POINT_2}}</li>
+            <li>{{SUMMARY_POINT_3}}</li>
+          </ul>
+
+          <!-- ===== 本文ここまで ===== -->
+
+        </div>
+
+        <!-- 関連記事 -->
+        <div class="section">
+          <h2 class="section-title">関連記事</h2>
+          <div class="card-grid">
+            <!-- 関連記事カードをここに -->
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 FitLab. All rights reserved.</p>
+      <p style="margin-top:8px;">
+        <a href="/privacy.html">プライバシーポリシー</a>
+        &nbsp;
+        <a href="/disclaimer.html">免責事項</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
