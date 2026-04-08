@@ -10,7 +10,8 @@
       "Bash(node -e ':*)",
       "Bash(where node:*)",
       "Bash(node -e \"const fs=require\\('fs'\\); console.log\\(fs.readFileSync\\('C:/Users/seven/dev/fitness-af/index.html','utf8'\\).includes\\('href=\\\\\"/\\\\\"'\\)\\);\")",
-      "Bash(node fix-paths.js)"
+      "Bash(node fix-paths.js)",
+      "Bash(node apply-affiliate.js)"
     ]
   }
 }
