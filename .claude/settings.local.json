@@ -11,7 +11,9 @@
       "Bash(where node:*)",
       "Bash(node -e \"const fs=require\\('fs'\\); console.log\\(fs.readFileSync\\('C:/Users/seven/dev/fitness-af/index.html','utf8'\\).includes\\('href=\\\\\"/\\\\\"'\\)\\);\")",
       "Bash(node fix-paths.js)",
-      "Bash(node apply-affiliate.js)"
+      "Bash(node apply-affiliate.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://hori1207.github.io/fitness-af/sitemap.xml)",
+      "Bash(node apply-moshimo-protein.js)"
     ]
   }
 }
