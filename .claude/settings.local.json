@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ':*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://hori1207.github.io/fitness-af/)",
+      "Bash(python3 -)",
+      "Bash(python -)",
+      "Bash(node -e ':*)",
+      "Bash(where node:*)",
+      "Bash(node -e \"const fs=require\\('fs'\\); console.log\\(fs.readFileSync\\('C:/Users/seven/dev/fitness-af/index.html','utf8'\\).includes\\('href=\\\\\"/\\\\\"'\\)\\);\")",
+      "Bash(node fix-paths.js)"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hori1207.github.io/fitness-af/sitemap.xml
