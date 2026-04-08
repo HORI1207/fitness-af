@@ -14,7 +14,8 @@
       "Bash(node apply-affiliate.js)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://hori1207.github.io/fitness-af/sitemap.xml)",
       "Bash(node apply-moshimo-protein.js)",
-      "Bash(node apply-easylink-protein.js)"
+      "Bash(node apply-easylink-protein.js)",
+      "Bash(node apply-easylink-myprotein.js)"
     ]
   }
 }
