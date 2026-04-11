@@ -1,0 +1,45 @@
+# X（Twitter）自動投稿 GitHub Actions ワークフロー
+# 毎日 9:00 JST（= 00:00 UTC）に記事をローテーション投稿する
+
+name: X 自動投稿
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 毎日 09:00 JST
+  workflow_dispatch:        # GitHub上から手動実行も可能
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    # 投稿済みインデックスをコミットするために書き込み権限が必要
+    permissions:
+      contents: write
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Node.js をセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: twitter-api-v2 をインストール
+        run: npm install twitter-api-v2
+
+      - name: X に投稿
+        run: node scripts/post-to-x.js
+        env:
+          X_API_KEY:             ${{ secrets.X_API_KEY }}
+          X_API_SECRET:          ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN:        ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+
+      - name: 投稿済みインデックスをコミット
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/last-posted.json
+          git diff --staged --quiet || git commit -m "chore: X投稿済みインデックスを更新"
+          git push
